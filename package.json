@@ -1,0 +1,43 @@
+{
+  "name": "linkbust",
+  "version": "0.1.0",
+  "description": "Check Markdown for broken LOCAL links — relative file paths and #heading anchors. No network, zero dependencies, fast enough for a pre-commit hook.",
+  "bin": {
+    "linkbust": "bin/cli.js"
+  },
+  "main": "src/core.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "markdown",
+    "links",
+    "link-checker",
+    "dead-links",
+    "broken-links",
+    "anchors",
+    "docs",
+    "lint",
+    "pre-commit",
+    "cli",
+    "zero-dependency"
+  ],
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjdoor/linkbust.git"
+  },
+  "homepage": "https://github.com/jjdoor/linkbust#readme",
+  "bugs": {
+    "url": "https://github.com/jjdoor/linkbust/issues"
+  }
+}
