@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" font-family="Menlo, 'SF Mono', 'DejaVu Sans Mono', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1000" height="420" fill="url(#bg)"/>
+  <rect width="1000" height="420" fill="none" stroke="#30363d" stroke-width="2"/>
+
+  <!-- terminal dots -->
+  <g>
+    <circle cx="936" cy="34" r="6" fill="#f85149"/>
+    <circle cx="958" cy="34" r="6" fill="#d29922"/>
+    <circle cx="980" cy="34" r="6" fill="#3fb950"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="60" y="112" font-size="62" font-weight="700" letter-spacing="-1">
+    <tspan fill="#58a6ff">link</tspan><tspan fill="#3fb950">bust</tspan>
+  </text>
+  <text x="62" y="148" font-size="20" fill="#8b949e">find broken local links in your Markdown — no network, zero deps</text>
+
+  <!-- output: broken-link rows -->
+  <g font-size="18">
+    <!-- row 1 -->
+    <text x="60" y="206" fill="#8b949e">README.md:8</text>
+    <text x="250" y="206" fill="#f85149" font-weight="700">✗</text>
+    <text x="284" y="206" fill="#79c0ff">./setup.md</text>
+    <text x="470" y="206" fill="#6e7681">(file not found)</text>
+    <!-- row 2 -->
+    <text x="60" y="238" fill="#8b949e">docs/api.md:14</text>
+    <text x="250" y="238" fill="#f85149" font-weight="700">✗</text>
+    <text x="284" y="238" fill="#79c0ff">#usage</text>
+    <text x="470" y="238" fill="#6e7681">(no anchor in this file)</text>
+    <!-- row 3 -->
+    <text x="60" y="270" fill="#8b949e">guide.md:3</text>
+    <text x="250" y="270" fill="#f85149" font-weight="700">✗</text>
+    <text x="284" y="270" fill="#79c0ff">./api.md#missing</text>
+    <text x="470" y="270" fill="#6e7681">(no anchor in ./api.md)</text>
+  </g>
+
+  <line x1="60" y1="296" x2="900" y2="296" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- summary -->
+  <text x="60" y="332" font-size="18" xml:space="preserve"><tspan fill="#f85149" font-weight="700">✗ 3 broken</tspan><tspan fill="#6e7681">  ·  142 local links checked  ·  </tspan><tspan fill="#8b949e">38 external skipped (never fetched)</tspan></text>
+
+  <!-- install hint -->
+  <text x="60" y="384" font-size="17" fill="#58a6ff">$ npx linkbust <tspan fill="#6e7681">·</tspan> pip install linkbust</text>
+</svg>
